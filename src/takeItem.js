@@ -24,7 +24,7 @@ export function takeItem(player, location, items, itemName, damagePlayer) {
                 if (item.pickupMessage && item.pickupMessage.length > 0) {
                     response.push(`${item.pickupMessage}`);
                 } else {
-                    response.push(`${item.shortDescription} taken`);
+                    response.push(`You now haz the ${item.shortDescription}`);
                 }
                 player.weightCarried = player.weightCarried + item.weight;
             } else {
@@ -39,7 +39,7 @@ export function takeItem(player, location, items, itemName, damagePlayer) {
     });
 
     if (!found) {
-        response.push(`${itemName} is not here`);
+        response.push(`The ${itemName} is not here`);
     }
 
     return response;

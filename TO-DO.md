@@ -46,6 +46,7 @@
 44. **DONE** implement items causing damage (snake)
 45. **DONE** implement basic 'eat' command
 46. make an edible object that restores health
+47. implement jump
 
 
 

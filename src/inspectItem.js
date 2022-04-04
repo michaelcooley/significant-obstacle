@@ -6,7 +6,7 @@ export function inspectItem(player, location, items, itemName) {
         if ((item.name === itemName && item.location === location.name)||
             (item.name === itemName && item.location === 'player'))
         {   //found it
-            response.push(`You see a ${item.longDescription}`);
+            response.push(`${item.longDescription}`);
             found = true;
         }
     });

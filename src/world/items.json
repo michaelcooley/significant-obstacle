@@ -2,17 +2,17 @@
     {
      "name": "ball",
       "shortDescription": "ping-pong ball",
-      "longDescription": "small white ping-pong ball",
+      "longDescription": "It's a small white ping-pong ball, much like the ones they make on Earth.",
       "initialLocation": "van",
       "location": "van",
       "weight": 3,
-      "pickupMessage": "For some reason you put the ping-pong ball in your mouth",
-      "dropMessage": "The ball bounces and rolls away before stopping"
+      "pickupMessage": "For some reason you put the ping-pong ball in your mouth.",
+      "dropMessage": "The ball bounces and rolls away before stopping."
     },
   {
     "name": "pencil",
     "shortDescription": "pencil",
-    "longDescription": "sharpened, yellow pencil",
+    "longDescription": "This pencil is yellow, and sharpened. It's a number 3 pencil, which makes it one better than your average pencil.",
     "initialLocation": "player",
     "location": "player",
     "weight": 1
@@ -20,7 +20,7 @@
   {
     "name": "gum",
     "shortDescription": "piece of gum",
-    "longDescription": "small wad of pink goo",
+    "longDescription": "The gum is a small wad of pink goo. It looks like it has already been chewed, but not by you.",
     "initialLocation": "player",
     "location": "player",
     "weight": 1
@@ -28,7 +28,7 @@
   {
     "name": "library",
     "shortDescription": "javascript library",
-    "longDescription": "carved wooden box containing a javascript library",
+    "longDescription": "The javascript library resembles a carved wooden box.",
     "initialLocation": "mushroom",
     "location": "mushroom",
     "weight": 100
@@ -36,8 +36,8 @@
   {
     "name": "raft",
     "shortDescription": "small rubber raft",
-    "longDescription": "the raft is made of rubber and full of air",
-    "pickupMessage": "You sling the raft over your shoulder and onto your back",
+    "longDescription": "The raft is made of rubber and full of air.",
+    "pickupMessage": "You sling the raft over your shoulder and onto your back.",
     "initialLocation": "mushroom",
     "location": "mushroom",
     "weight": 10,
@@ -50,8 +50,8 @@
   {
     "name": "glass",
     "shortDescription": "spooky glass",
-    "longDescription": "small, oblong piece of spooky glass",
-    "pickupMessage": "You pick it up, with hesitation, because it's extra spooky",
+    "longDescription": "The spooky glass is small, and oblong.",
+    "pickupMessage": "You pick it up, with hesitation, because it's extra spooky.",
     "initialLocation": "treetop",
     "location": "treetop",
     "weight": 3,
@@ -64,35 +64,35 @@
   {
     "name": "marble",
     "shortDescription": "silver marble",
-    "longDescription": "the marble is like a mirror, looking deep into your soul. It reminds you of a spinning disco ball.",
-    "pickupMessage": "You pick it up, and it regards you with suspicion",
+    "longDescription": "The marble is like a mirror, looking deep into your soul. It reminds you of a spinning disco ball.",
+    "pickupMessage": "You pick it up, and it regards you with suspicion.",
     "initialLocation": "maze-l",
     "location": "maze-l",
     "weight": 1,
     "use": {
       "where": "van",
       "useMessage": "You hold the marble up and suddenly you hear keyboards in the distance. The Bee-Gees poster on the wall seems to suddenly come to life.",
-      "newLocation": "treehouse"
+      "newLocation": "bunker"
     }
   },
   {
     "name": "barrel",
     "shortDescription": "wooden barrel",
-    "longDescription": "the barrel looks sturdy and just big enough for an idiot to get into",
-    "pickupMessage": "You pick it up, and sling it over your back. It's heavy and you aren't sure how far you can carry it",
+    "longDescription": "The barrel looks sturdy and just big enough for an idiot to get into.",
+    "pickupMessage": "You pick it up, and sling it over your back. It's heavy and you aren't sure how far you can carry it.",
     "initialLocation": "swamp",
     "location": "swamp",
     "weight": 40,
     "use": {
       "where": "waterfall",
-      "useMessage": "You climb into the barrel, like an idiot, and roll into the river just above the waterfall",
+      "useMessage": "You climb into the barrel, like an idiot, and roll into the river just above the waterfall. The strong current carries you over the falls.",
       "newLocation": "lagoon"
     }
   },
   {
     "name": "dove",
     "shortDescription": "winter dove",
-    "longDescription": "the dove reminds you of snow and birds",
+    "longDescription": "The dove reminds you of snow and birds.",
     "pickupMessage": "You gently pick up the dove, which doesn't try to fly away. In a tiny bird voice it says, Stephen King is my spirit animal.",
     "initialLocation": "lagoon",
     "location": "lagoon",
@@ -107,77 +107,78 @@
   {
     "name": "guitar",
     "shortDescription": "purple electric guitar",
-    "longDescription": "the guitar is purple and looks ancient and worn, but still functional",
-    "pickupMessage": "You pick up the guitar and strum an E Minor chord, as people do.",
+    "longDescription": "The guitar is purple and looks ancient and worn, but still functional.",
+    "pickupMessage": "You pick up the guitar and strum an E Minor chord--as people do.",
     "initialLocation": "",
     "location": "",
     "weight": 5,
     "use": {
       "where": "mushroom",
-      "useMessage": "You start playing Stairway to Heaven. A gnome shows up and slaps you.",
+      "useMessage": "You start playing Stairway to Heaven. A Gnome shows up and slaps you.",
       "newLocation": "maze-l"
     }
   },
   {
     "name": "key",
     "shortDescription": "gold key",
-    "longDescription": "gold key",
+    "longDescription": "The key is ornate and made out of gold. It has a ruby jewel on the handle.",
     "pickupMessage": "You pick up the key",
     "initialLocation": "",
     "location": "maze-c",
     "weight": 1,
     "use": {
       "where": "doorway",
-      "useMessage": "You put the key in the door lock and turn it. A box of sand drops out of the sky.",
+      "useMessage": "You put the key in the door lock and turn it. A box of sand drops out of the sky, but the door does not open.",
       "newItem": "sand"
     }
   },
   {
     "name": "cable",
     "shortDescription": "HDMI cable",
-    "longDescription": "HDMI cable",
-    "pickupMessage": "You pick up the cable and wrap it around your waist like a belt",
+    "longDescription": "The HDMI cable is black and three meters long.",
+    "pickupMessage": "You pick up the cable and wrap it around your waist like a belt.",
     "initialLocation": "",
     "location": "",
     "weight": 1,
     "use": {
       "where": "",
-      "useMessage": "You plug one end of the cable into the wall and the other into the box",
+      "useMessage": "You plug one end of the cable into the wall and the other into the box.",
       "newLocation": ""
     }
   },
   {
     "name": "sand",
     "shortDescription": "box of sand",
-    "longDescription": "box of sand",
-    "pickupMessage": "You pick up sand, which is in a box",
+    "longDescription": "The box of sand weighs a few pounds. On the side of the box it says 'Sand?'",
+    "pickupMessage": "You pick up sand, which is in a box.",
     "initialLocation": "",
     "location": "",
     "weight": 1,
     "use": {
-      "where": "",
-      "useMessage": "You pour the sand into the ___",
-      "newLocation": ""
+      "where": "node farm",
+      "useMessage": "You pour the sand into the node farm and the nodes begin singing a happy song. A flare gun appears in mid-air and then lands softly at your feet.",
+      "newLocation": "node farm",
+      "newItem": "gun"
     }
   },
   {
     "name": "gun",
     "shortDescription": "flare gun",
-    "longDescription": "flare gun",
-    "pickupMessage": "You pick up flare gun and make sure the safety is flipped on, then you tuck it into your left front pocket where it's likely to shoot off your wang",
+    "longDescription": "The flare gun is metallic, with one barrel and one trigger. It looks like a flare is loaded into the chamber.",
+    "pickupMessage": "You pick up flare gun and make sure the safety is flipped on, then you tuck it into your left front pocket where it's likely to shoot off your wang--if you have a wang. If not... congratulations!",
     "initialLocation": "",
     "location": "",
     "weight": 1,
     "use": {
       "where": "",
-      "useMessage": "You fire the flare gun into the air",
+      "useMessage": "You fire the flare gun into the air.",
       "newLocation": ""
     }
   },
   {
     "name": "snake",
     "shortDescription": "poisonous snake",
-    "longDescription": "poisonous snake",
+    "longDescription": "The snake is a Nazi, which you can tell from the look in it's eyes--and the red MAGA hat.",
     "pickupMessage": "Why would you do that? It bites you on the arm and you drop it.",
     "initialLocation": "swamp",
     "location": "swamp",

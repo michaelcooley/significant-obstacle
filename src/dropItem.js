@@ -17,7 +17,7 @@ export function dropItem(player, location, items, itemName) {
             if (item.dropMessage && item.dropMessage.length > 0) {
                 response.push(`${item.dropMessage}`);
             } else {
-                response.push(`${item.shortDescription} dropped`);
+                response.push(`You drop the ${item.shortDescription}`);
             }
             player.weightCarried -= item.weight;
         }

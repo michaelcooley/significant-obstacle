@@ -391,13 +391,17 @@
       {
         "name": "east",
         "linksTo": "van"
+      },
+      {
+        "name": "west",
+        "linksTo": "node farm"
       }
     ]
   },
   {
     "name": "tower",
-    "shortDescription": "stone tower",
-    "longDescription": "stone tower",
+    "shortDescription": "dark stone tower",
+    "longDescription": "You are standing on top of a dark stone tower.",
     "exits": [
       {
         "name": "north",
@@ -412,7 +416,7 @@
   {
     "name": "wall",
     "shortDescription": "mud brick wall",
-    "longDescription": "mud brick wall",
+    "longDescription": "You are on a mud brick wall that runs toward the north and south. West of you the dark tower is visible. To the east you can hear rushing water.",
     "exits": [
       {
         "name": "east",
@@ -453,11 +457,33 @@
   {
     "name": "doorway",
     "shortDescription": "there is a locked door here",
-    "longDescription": "the door is locked and you can't see anything through the keyhole",
+    "longDescription": "The door is locked and you can't see anything through the keyhole.",
     "exits": [
       {
         "name": "west",
         "linksTo": "lagoon"
+      }
+    ]
+  },
+  {
+    "name": "bunker",
+    "shortDescription": "the bunker",
+    "longDescription": "The bunker has no windows. There is a trashcan on a desk and it's humming. Above the desk is a rectangular screen showing static. It looks like the trashcan needs to be connected to the screen, but there's no wire.",
+    "exits": [
+      {
+        "name": "up",
+        "linksTo": "far side"
+      }
+    ]
+  },
+  {
+    "name": "node farm",
+    "shortDescription": "node farm",
+    "longDescription": "This is a large field where all the node modules grow. They are stringy and weak due to the density of the soil.",
+    "exits": [
+      {
+        "name": "east",
+        "linksTo": "swamp"
       }
     ]
   }

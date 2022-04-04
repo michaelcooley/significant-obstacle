@@ -13,13 +13,13 @@ export function eatItem(player, location, items, itemName, damagePlayer) {
     let found = false;
     items.forEach(item => {
         if (item.name === itemName && (item.location === location.name || item.location === 'player')) {   //found it
-           response.push(`The ${item.shortDescription} disagrees with you, so you stop chewing on it`);
+           response.push(`The ${item.shortDescription} disagrees with you, so you stop chewing on it.`);
            found = true;
         }
     });
 
     if (!found) {
-        response.push(`You can't eat something that isn't here`);
+        response.push(`You can't eat something that isn't here.`);
     }
 
     return response;

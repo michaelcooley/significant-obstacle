@@ -17,7 +17,7 @@ export function takeAll(player, location, items, damagePlayer) {
                 if (item.pickupMessage && item.pickupMessage.length > 0) {
                     response.push(`${item.pickupMessage}`);
                 } else {
-                    response.push(`${item.shortDescription} taken`);
+                    response.push(`You now haz the ${item.shortDescription}`);
                 }
                 player.weightCarried = player.weightCarried + item.weight;
             } else {

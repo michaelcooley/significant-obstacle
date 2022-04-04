@@ -28,7 +28,10 @@ export function parseOneWordCommands(word, words, response, location, player, it
             response = listInventory(player, items);
             break;
         case 'swim':
-            response.push(`who do you think you are, Jacques Clouseau?`);
+            response.push(`Who do you think you are, Jacques Clouseau?`);
+            break;
+        case 'jump':
+            response.push(`You get one foot off the ground, but the other one refuses for religious reasons.`);
             break;
         default:
             response.push(shared.unrecognizedCommand);

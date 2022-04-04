@@ -3,7 +3,7 @@ export function describeExits(currentLoc) {
    if (currentLoc.exits.length > 0) {
         let count = 0;
         if (currentLoc.exits.length === 1) {
-            exits = 'There is an exit to the ';
+            exits = 'There is an exit leading ';
         } else {
             exits = 'There are exits to the ';
         }
