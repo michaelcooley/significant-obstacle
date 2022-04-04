@@ -141,9 +141,10 @@
     "location": "",
     "weight": 1,
     "use": {
-      "where": "",
-      "useMessage": "You plug one end of the cable into the wall and the other into the box.",
-      "newLocation": ""
+      "where": "bunker",
+      "useMessage": "You plug one end of the cable into the trashcan, and the other end into the rectangular screen on the wall. There's a flicker and then the image resolves into a line of text that reads, GUESS MY WORD! IT'S 6 CHARACTERS LONG! FOR EACH LETTER YOU GET RIGHT, I WILL PRINT A 'C' UNLESS IT'S IN THE WRONG SPOT. THOSE WILL GET A 'W'. LETTERS THAT AREN'T EVEN IN MY WORD GET AN 'X'. You only have 6 guesses before you lose your marble.",
+      "newLocation": "",
+      "parser": "wordPuzzle"
     }
   },
   {

@@ -12,6 +12,7 @@ import playerData from './world/player.json';
 import { describeLocation } from "./describeLocation";
 import {WinningBanner} from "./winningBanner";
 import { shared } from "./shared";
+import {WordPuzzleParser} from "./wordPuzzleParser";
 
 class App extends React.Component {
     constructor(props) {
@@ -29,10 +30,19 @@ class App extends React.Component {
             locations: undefined,
             items: undefined,
             outputList: Array(shared.outputRows).fill(""),
+            parser: undefined,
+            guessesLeft: 0,
+            prompt: shared.defaultPrompt
         }
     };
 
-    moveLocation = (location, preText, points) => {
+    moveLocation = (location, preText, points, parser) => {
+
+        if (parser && parser.length > 0) {              //if we switch to the word puzzle parser set guesses too
+            this.setState({parser: parser});
+            this.setState({prompt: 'Guess Word:'});
+            this.setState({guessesLeft: shared.maxGuesses});
+        }
 
         if (points && points > 0) {
             this.setState({score: this.state.score + points});
@@ -73,6 +83,45 @@ class App extends React.Component {
         }
     }
 
+    updateParser = (newParser, preText, points, newLocation) => {
+        if (preText && preText.length > 0) {
+            for (const line of preText) {
+                this.pushOutputText(line);
+            }
+        }
+        this.setState({score: this.state.score + points});
+        this.setState({parser: newParser});
+        if (newParser === '') {
+            this.setState({prompt: shared.defaultPrompt});
+        }
+        if (this.state.score + points >= shared.maxScore) {
+            this.pushOutputText('');
+            this.pushOutputText('');
+            this.pushOutputText('');
+            this.pushOutputText('');
+            this.pushOutputText('Game Over!');
+            this.pushOutputText('You won!');
+            this.pushOutputText('');
+            this.setState({gameOver: true});
+            this.setState({gameRunning: false});
+        } else {
+            if (newLocation !== '') {
+                this.state.locations.forEach(loc => {
+                    if (loc.name === newLocation) {
+                        this.setState({currentLocation: loc});
+                        let response = [];
+                        response = describeLocation(loc, this.state.items);
+                        if (response && response.length > 0) {
+                            for (const line of response) {
+                                this.pushOutputText(line);
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    }
+
   commandEntered = (event) => {
       if (event.key === "Enter") {
           if (!this.state.gameRunning) {
@@ -87,7 +136,12 @@ class App extends React.Component {
               this.pushOutputText("");
               this.pushOutputText(`\n> ${command}`);    //add user input to output window
               this.pushOutputText("");
-              let response = GameEngine(command, location, this.state.items, this.moveLocation, player, this.damagePlayer);
+              let response = '';
+              if (this.state.parser && this.state.parser === 'wordPuzzle') {
+                  response = WordPuzzleParser(command, location, this.state.items, this.updateParser, this.state.guessesLeft, this.updateGuessesLeft, player);
+              } else {
+                  response = GameEngine(command, location, this.state.items, this.moveLocation, player, this.damagePlayer);
+              }
               for (const line of response) {
                   this.pushOutputText(line);
               }
@@ -117,11 +171,15 @@ class App extends React.Component {
         this.setState({outputText: newOutputList});
   }
 
-    damagePlayer = (points) => {
+  damagePlayer = (points) => {
         this.setState({health: this.state.health - points});
-    }
+  }
 
-    startGame = () => {
+  updateGuessesLeft = () => {
+        this.setState({guessesLeft: this.state.guessesLeft - 1});
+  }
+
+  startGame = () => {
 
       //copy default player information in
       this.setState({playerData: playerData});
@@ -163,7 +221,7 @@ class App extends React.Component {
           <WinningBanner gameOver={this.state.gameOver}/>
           <StartGameHealthAndScore onClick={this.startGame} score={this.state.score} maxScore={this.state.maxScore} health={this.state.health}/>
           <OutputWindow outputList={this.state.outputList}/>
-          <CommandWindow onKeyPress={this.commandEntered} />
+          <CommandWindow onKeyPress={this.commandEntered} prompt={this.state.prompt} />
         </div>
     );
   }

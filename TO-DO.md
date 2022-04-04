@@ -39,7 +39,7 @@
 37. **DONE** implement dangerous things that can damage player health
 38. **DONE** make using an item make another item appear (releasing dove on tower makes guitar appear)
 39. **DONE** make using key produce box of sand
-40. make using HDMI cable do something
+40. **DONE** make using HDMI cable do something
 41. **DONE** make using flare gun do something
 42. **DONE** make using box of sand do something
 43. implement gremlin (NPC) that shows up and takes things from you and drops them elsewhere
@@ -48,6 +48,7 @@
 46. **DONE** (booster) make an edible object that restores health
 47. **DONE** implement jump
 48. make descriptions better and funnier
+49. **DONE** implement special parser for wordle imposter, triggered by hooking up HDMI cable
 
 
 

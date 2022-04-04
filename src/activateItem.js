@@ -3,6 +3,7 @@ export function activateItem(player, location, items, itemName, moveLocation) {
     let activated = false;
     let found = false;
     let newLocation = '';
+    let newParser = '';
     items.forEach(item => {
         if (item.name === itemName && item.location === 'player') {   //found it
             found = true;
@@ -20,6 +21,9 @@ export function activateItem(player, location, items, itemName, moveLocation) {
                             }
                         });
                     }
+                    if (item.use.parser) {
+                        newParser = item.use.parser;
+                    }
                     activated = true;
                     return;
                 } else {
@@ -35,7 +39,7 @@ export function activateItem(player, location, items, itemName, moveLocation) {
         response.push(`You are not carrying ${itemName}`);
     }
     if (activated) {
-        moveLocation(newLocation, response, 10);
+        moveLocation(newLocation, response, 10, newParser);
         return;
     }
 
