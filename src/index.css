@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: ghostwhite;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.description {
+  width: 80%;
+  text-align: left;
+  margin-left: 20px;
+  font-size: small;
+}
+
+.start-game-row-container {
+  display: flex;
+  width: 350px;
+  height: 20px;
+  margin-top: 20px;
+  margin-left: 30px;
+  justify-content: space-evenly;
+  justify-items: flex-start;
+}
+
+.start-game-button-container {
+  display: flex;
+  width: 180px;
+  height: 30px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.score-container {
+  display: flex;
+  width: 180px;
+  height: 30px;
+  margin-top: 12px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.command-input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: flex-start;
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: small;
+}
+
+.command-input-label-container {
+  display: flex;
+  width: 80px;
+  height: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: small;
+}
+
+.command-input-entry-container {
+  display: flex;
+  width: 180px;
+  height: 20px;
+  margin-top: 10px;
+  font-size: small;
+}
+
+.output-window-container {
+  display: flex;
+  wrap-option: wrap;
+  text-align: left;
+  width: 500px;
+  height: 300px;
+  margin-left: 5px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  /*border: cadetblue;
+  border-width: 1px;*/
+  font-size: small;
+}
+
+.diagnostic-container {
+  width: 80%;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: small;
+}
+
+.list-no-bullets {
+   list-style-type: none;
+}
+
+li {
+  min-height: 1.6em;  /* keep list from collapsing when lines are blank */
+}

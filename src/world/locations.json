@@ -1,0 +1,464 @@
+[
+    {
+      "name": "van",
+      "shortDescription": "van",
+      "longDescription": "You are in a van, down by the river. The floor is orange shag carpeting, and you are sitting near a window. On the wall to your left is a Bee-Gee's poster.",
+      "exits": [
+        {
+          "name": "east",
+          "linksTo": "river"
+        },
+        {
+          "name": "south",
+          "linksTo": "mushroom"
+        },
+        {
+          "name": "west",
+          "linksTo": "swamp"
+        }
+      ]
+    },
+    {
+      "name": "river",
+      "shortDescription": "river",
+      "longDescription": "You are standing next to a fast flowing river of clear blue water. There is an old van to the west, with grass growing up around the wheels.",
+      "exits": [
+        {
+          "name": "west",
+          "linksTo": "van"
+        }
+      ]
+    },
+  {
+    "name": "mushroom",
+    "shortDescription": "mushroom",
+    "longDescription": "You are inside the stem of a gigantic mushroom, where a room has been carved. On the wall is a spray painted phrase in a language you don't recognize.",
+    "exits": [
+      {
+        "name": "north",
+        "linksTo": "van"
+      },
+      {
+        "name": "south",
+        "linksTo": "tower"
+      }
+    ]
+  },
+  {
+    "name": "far side",
+    "shortDescription": "far side",
+    "longDescription": "You are on the far side of the river. In the distance you can see the van, across the water.",
+    "exits": [
+      {
+        "name": "east",
+        "linksTo": "treehouse"
+      }
+    ]
+  },
+  {
+    "name": "treehouse",
+    "shortDescription": "treehouse",
+    "longDescription": "You are partway up a giant treehouse, with a good view of the river to the west.",
+    "exits": [
+      {
+        "name": "west",
+        "linksTo": "far side"
+      },
+      {
+        "name": "up",
+        "linksTo": "treetop"
+      },
+      {
+        "name": "north",
+        "linksTo": "bridge"
+      }
+    ]
+  },
+  {
+    "name": "treetop",
+    "shortDescription": "top of the tree",
+    "longDescription": "You are far above the treehouse, nestled into a small crevice in the tree trunk. The tree continues above you for another ten meters.",
+    "exits": [
+      {
+        "name": "down",
+        "linksTo": "treehouse"
+      }
+    ]
+  },
+  {
+    "name": "bridge",
+    "shortDescription": "large wooden bridge over the river",
+    "longDescription": "You are at the eastern end of a wooden bridge over the river.",
+    "exits": [
+      {
+        "name": "south",
+        "linksTo": "treehouse"
+      },
+      {
+        "name": "west",
+        "linksTo": "van"
+      },
+      {
+        "name": "north",
+        "linksTo": "hole"
+      }
+    ]
+  },
+  {
+    "name": "hole",
+    "shortDescription": "large hole in the ground ",
+    "longDescription": "You are standing next to a hole in the ground. You look down in the hole, but you can't see the bottom. It's dark down there and you worry about getting eaten by a Drew if you jump in.",
+    "exits": [
+      {
+        "name": "south",
+        "linksTo": "bridge"
+      },
+      {
+        "name": "down",
+        "linksTo": "maze-a"
+      }
+    ]
+  },
+  {
+    "name": "maze-a",
+    "shortDescription": "you are in a maze",
+    "longDescription": "you are in a maze",
+    "exits": [
+      {
+        "name": "up",
+        "linksTo": "hole"
+      },
+      {
+        "name": "south",
+        "linksTo": "maze-d"
+      },
+      {
+        "name": "east",
+        "linksTo": "maze-j"
+      },
+      {
+        "name": "west",
+        "linksTo": "maze-g"
+      }
+    ]
+  },
+  {
+    "name": "maze-b",
+    "shortDescription": "you are in a maze",
+    "longDescription": "you are in a maze",
+    "exits": [
+      {
+        "name": "north",
+        "linksTo": "maze-b"
+      },
+      {
+        "name": "south",
+        "linksTo": "hole"
+      },
+      {
+        "name": "east",
+        "linksTo": "maze-b"
+      },
+      {
+        "name": "west",
+        "linksTo": "maze-c"
+      }
+    ]
+  },
+  {
+    "name": "maze-c",
+    "shortDescription": "you are in a maze",
+    "longDescription": "you are in a maze",
+    "exits": [
+      {
+        "name": "south",
+        "linksTo": "maze-i"
+      },
+      {
+        "name": "east",
+        "linksTo": "maze-f"
+      },
+      {
+        "name": "west",
+        "linksTo": "maze-b"
+      }
+    ]
+  },
+  {
+    "name": "maze-d",
+    "shortDescription": "you are in a maze",
+    "longDescription": "you are in a maze",
+    "exits": [
+      {
+        "name": "north",
+        "linksTo": "maze-a"
+      },
+      {
+        "name": "east",
+        "linksTo": "maze-f"
+      },
+      {
+        "name": "west",
+        "linksTo": "maze-l"
+      }
+    ]
+  },
+  {
+    "name": "maze-e",
+    "shortDescription": "you are in a maze",
+    "longDescription": "you are in a maze",
+    "exits": [
+      {
+        "name": "north",
+        "linksTo": "maze-i"
+      },
+      {
+        "name": "south",
+        "linksTo": "maze-h"
+      },
+      {
+        "name": "east",
+        "linksTo": "maze-f"
+      },
+      {
+        "name": "west",
+        "linksTo": "maze-d"
+      }
+    ]
+  },
+  {
+    "name": "maze-f",
+    "shortDescription": "you are in a maze",
+    "longDescription": "you are in a maze",
+    "exits": [
+      {
+        "name": "north",
+        "linksTo": "maze-b"
+      },
+      {
+        "name": "south",
+        "linksTo": "hole"
+      },
+      {
+        "name": "east",
+        "linksTo": "maze-c"
+      },
+      {
+        "name": "west",
+        "linksTo": "maze-e"
+      }
+    ]
+  },
+  {
+    "name": "maze-g",
+    "shortDescription": "you are in a maze",
+    "longDescription": "you are in a maze",
+    "exits": [
+      {
+        "name": "north",
+        "linksTo": "maze-j"
+      },
+      {
+        "name": "south",
+        "linksTo": "maze-h"
+      },
+      {
+        "name": "east",
+        "linksTo": "maze-h"
+      },
+      {
+        "name": "west",
+        "linksTo": "maze-a"
+      }
+    ]
+  },
+  {
+    "name": "maze-h",
+    "shortDescription": "you are in a maze",
+    "longDescription": "you are in a maze",
+    "exits": [
+      {
+        "name": "north",
+        "linksTo": "maze-e"
+      },
+      {
+        "name": "south",
+        "linksTo": "maze-g"
+      },
+      {
+        "name": "east",
+        "linksTo": "maze-i"
+      },
+      {
+        "name": "west",
+        "linksTo": "maze-g"
+      }
+    ]
+  },
+  {
+    "name": "maze-i",
+    "shortDescription": "you are in a maze",
+    "longDescription": "you are in a maze",
+    "exits": [
+      {
+        "name": "north",
+        "linksTo": "maze-c"
+      },
+      {
+        "name": "south",
+        "linksTo": "maze-h"
+      },
+      {
+        "name": "west",
+        "linksTo": "maze-e"
+      }
+    ]
+  },
+  {
+    "name": "maze-j",
+    "shortDescription": "you are in a maze",
+    "longDescription": "you are in a maze",
+    "exits": [
+      {
+        "name": "north",
+        "linksTo": "maze-g"
+      },
+      {
+        "name": "south",
+        "linksTo": "maze-l"
+      },
+      {
+        "name": "east",
+        "linksTo": "maze-a"
+      },
+      {
+        "name": "west",
+        "linksTo": "maze-k"
+      }
+    ]
+  },
+  {
+    "name": "maze-k",
+    "shortDescription": "you are in a maze",
+    "longDescription": "you are in a maze",
+    "exits": [
+      {
+        "name": "north",
+        "linksTo": "maze-k"
+      },
+      {
+        "name": "south",
+        "linksTo": "maze-j"
+      },
+      {
+        "name": "east",
+        "linksTo": "maze-l"
+      },
+      {
+        "name": "west",
+        "linksTo": "maze-k"
+      }
+    ]
+  },
+  {
+    "name": "maze-l",
+    "shortDescription": "you are in a maze",
+    "longDescription": "you are in a maze",
+    "exits": [
+      {
+        "name": "north",
+        "linksTo": "maze-j"
+      },
+      {
+        "name": "south",
+        "linksTo": "maze-k"
+      },
+      {
+        "name": "east",
+        "linksTo": "maze-d"
+      },
+      {
+        "name": "west",
+        "linksTo": "maze-d"
+      }
+    ]
+  },
+  {
+    "name": "swamp",
+    "shortDescription": "swamp",
+    "longDescription": "You are in a swamp full of spongy grass and insects. It smells like moss.",
+    "exits": [
+      {
+        "name": "east",
+        "linksTo": "van"
+      }
+    ]
+  },
+  {
+    "name": "tower",
+    "shortDescription": "stone tower",
+    "longDescription": "stone tower",
+    "exits": [
+      {
+        "name": "north",
+        "linksTo": "mushroom"
+      },
+      {
+        "name": "east",
+        "linksTo": "wall"
+      }
+    ]
+  },
+  {
+    "name": "wall",
+    "shortDescription": "mud brick wall",
+    "longDescription": "mud brick wall",
+    "exits": [
+      {
+        "name": "east",
+        "linksTo": "waterfall"
+      },
+      {
+        "name": "west",
+        "linksTo": "tower"
+      }
+    ]
+  },
+  {
+    "name": "waterfall",
+    "shortDescription": "waterfall",
+    "longDescription": "waterfall",
+    "exits": [
+      {
+        "name": "west",
+        "linksTo": "wall"
+      }
+    ]
+  },
+  {
+    "name": "lagoon",
+    "shortDescription": "lagoon",
+    "longDescription": "lagoon",
+    "exits": [
+      {
+        "name": "west",
+        "linksTo": "wall"
+      },
+      {
+        "name": "east",
+        "linksTo": "doorway"
+      }
+    ]
+  },
+  {
+    "name": "doorway",
+    "shortDescription": "there is a locked door here",
+    "longDescription": "the door is locked and you can't see anything through the keyhole",
+    "exits": [
+      {
+        "name": "west",
+        "linksTo": "lagoon"
+      }
+    ]
+  }
+]

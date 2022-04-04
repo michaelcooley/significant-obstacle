@@ -1,0 +1,12 @@
+{
+  "name": "Dweeblefloss",
+  "description": "short, hairy individual, with large feet and small ears",
+  "extraDetail": "You aren't sure where you are from, but you are quite sure you like cake",
+  "height": "1.5 meters",
+  "weight": "slightly more than a big rock",
+  "weightCarried": 2,
+  "items": [
+    {"name": "pencil" },
+    {"name": "piece of gum"}
+  ]
+}

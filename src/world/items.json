@@ -1,0 +1,177 @@
+[
+    {
+     "name": "ball",
+      "shortDescription": "ping-pong ball",
+      "longDescription": "small white ping-pong ball",
+      "initialLocation": "van",
+      "location": "van",
+      "weight": 3,
+      "pickupMessage": "For some reason you put the ping-pong ball in your mouth",
+      "dropMessage": "The ball bounces and rolls away before stopping"
+    },
+  {
+    "name": "pencil",
+    "shortDescription": "pencil",
+    "longDescription": "sharpened, yellow pencil",
+    "initialLocation": "player",
+    "location": "player",
+    "weight": 1
+  },
+  {
+    "name": "gum",
+    "shortDescription": "piece of gum",
+    "longDescription": "small wad of pink goo",
+    "initialLocation": "player",
+    "location": "player",
+    "weight": 1
+  },
+  {
+    "name": "library",
+    "shortDescription": "javascript library",
+    "longDescription": "carved wooden box containing a javascript library",
+    "initialLocation": "mushroom",
+    "location": "mushroom",
+    "weight": 100
+  },
+  {
+    "name": "raft",
+    "shortDescription": "small rubber raft",
+    "longDescription": "the raft is made of rubber and full of air",
+    "pickupMessage": "You sling the raft over your shoulder and onto your back",
+    "initialLocation": "mushroom",
+    "location": "mushroom",
+    "weight": 10,
+    "use": {
+      "where": "river",
+      "useMessage": "You throw the raft into the river and then hop in, paddling furiously with your hands. After a few frantic minutes, you reach the far side of the river and hop out of the raft.",
+      "newLocation": "far side"
+    }
+  },
+  {
+    "name": "glass",
+    "shortDescription": "spooky glass",
+    "longDescription": "small, oblong piece of spooky glass",
+    "pickupMessage": "You pick it up, with hesitation, because it's extra spooky",
+    "initialLocation": "treetop",
+    "location": "treetop",
+    "weight": 3,
+    "use": {
+      "where": "mushroom",
+      "useMessage": "You hold the spooky glass up, and through it you can see that the cyrillic message on the wall says: Russian Warship, go fuck yourself!",
+      "newLocation": "mushroom"
+    }
+  },
+  {
+    "name": "marble",
+    "shortDescription": "silver marble",
+    "longDescription": "the marble is like a mirror, looking deep into your soul. It reminds you of a spinning disco ball.",
+    "pickupMessage": "You pick it up, and it regards you with suspicion",
+    "initialLocation": "maze-l",
+    "location": "maze-l",
+    "weight": 1,
+    "use": {
+      "where": "van",
+      "useMessage": "You hold the marble up and suddenly you hear keyboards in the distance. The Bee-Gees poster on the wall seems to suddenly come to life.",
+      "newLocation": "treehouse"
+    }
+  },
+  {
+    "name": "barrel",
+    "shortDescription": "wooden barrel",
+    "longDescription": "the barrel looks sturdy and just big enough for an idiot to get into",
+    "pickupMessage": "You pick it up, and sling it over your back. It's heavy and you aren't sure how far you can carry it",
+    "initialLocation": "swamp",
+    "location": "swamp",
+    "weight": 40,
+    "use": {
+      "where": "waterfall",
+      "useMessage": "You climb into the barrel, like an idiot, and roll into the river just above the waterfall",
+      "newLocation": "lagoon"
+    }
+  },
+  {
+    "name": "dove",
+    "shortDescription": "winter dove",
+    "longDescription": "the dove reminds you of snow and birds",
+    "pickupMessage": "You gently pick up the dove, which doesn't try to fly away. In a tiny bird voice it says, Stephen King is my spirit animal.",
+    "initialLocation": "lagoon",
+    "location": "lagoon",
+    "weight": 3,
+    "use": {
+      "where": "tower",
+      "useMessage": "You release the dove and it spirals toward the sun, looking down at you one last time. A guitar appears at your feet.",
+      "newLocation": "tower",
+      "newItem": "guitar"
+    }
+  },
+  {
+    "name": "guitar",
+    "shortDescription": "purple electric guitar",
+    "longDescription": "the guitar is purple and looks ancient and worn, but still functional",
+    "pickupMessage": "You pick up the guitar and strum an E Minor chord, as people do.",
+    "initialLocation": "",
+    "location": "",
+    "weight": 5,
+    "use": {
+      "where": "mushroom",
+      "useMessage": "You start playing Stairway to Heaven. A gnome shows up and slaps you.",
+      "newLocation": "maze-l"
+    }
+  },
+  {
+    "name": "key",
+    "shortDescription": "gold key",
+    "longDescription": "gold key",
+    "pickupMessage": "You pick up the key",
+    "initialLocation": "",
+    "location": "maze-c",
+    "weight": 1,
+    "use": {
+      "where": "doorway",
+      "useMessage": "You put the key in the door lock and turn it. A box of sand drops out of the sky.",
+      "newItem": "sand"
+    }
+  },
+  {
+    "name": "cable",
+    "shortDescription": "HDMI cable",
+    "longDescription": "HDMI cable",
+    "pickupMessage": "You pick up the cable and wrap it around your waist like a belt",
+    "initialLocation": "",
+    "location": "",
+    "weight": 1,
+    "use": {
+      "where": "",
+      "useMessage": "You plug one end of the cable into the wall and the other into the box",
+      "newLocation": ""
+    }
+  },
+  {
+    "name": "sand",
+    "shortDescription": "box of sand",
+    "longDescription": "box of sand",
+    "pickupMessage": "You pick up sand, which is in a box",
+    "initialLocation": "",
+    "location": "",
+    "weight": 1,
+    "use": {
+      "where": "",
+      "useMessage": "You pour the sand into the ___",
+      "newLocation": ""
+    }
+  },
+  {
+    "name": "gun",
+    "shortDescription": "flare gun",
+    "longDescription": "flare gun",
+    "pickupMessage": "You pick up flare gun and make sure the safety is flipped on, then you tuck it into your left front pocket where it's likely to shoot off your wang",
+    "initialLocation": "",
+    "location": "",
+    "weight": 1,
+    "use": {
+      "where": "",
+      "useMessage": "You fire the flare gun into the air",
+      "newLocation": ""
+    }
+  }
+]
