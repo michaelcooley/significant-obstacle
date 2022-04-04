@@ -173,5 +173,15 @@
       "useMessage": "You fire the flare gun into the air",
       "newLocation": ""
     }
+  },
+  {
+    "name": "snake",
+    "shortDescription": "poisonous snake",
+    "longDescription": "poisonous snake",
+    "pickupMessage": "Why would you do that? It bites you on the arm and you drop it.",
+    "initialLocation": "swamp",
+    "location": "swamp",
+    "weight": 1,
+    "damage": 10
   }
 ]

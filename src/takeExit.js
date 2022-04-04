@@ -8,8 +8,6 @@ export function takeExit(currentLoc, direction, moveLocation) {
     if (direction === 'u') direction = 'up';
     if (direction === 'd') direction = 'down';
 
-    console.log(`trying to take exit ${direction} from ${currentLoc.name}`);
-
     let found = false;
     for (const oneExit of currentLoc.exits) {
         if (oneExit.name === direction) {

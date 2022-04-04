@@ -7,7 +7,6 @@ export function parseOneWordCommands(word, words, response, location, player, it
     switch (words[0]) {
         case 'look':
         case 'l':
-            console.log('command is recognized');
             response = describeLocation(location, items);
             break;
         case 'e':
@@ -28,8 +27,10 @@ export function parseOneWordCommands(word, words, response, location, player, it
         case 'inventory':
             response = listInventory(player, items);
             break;
+        case 'swim':
+            response.push(`who do you think you are, Jacques Clouseau?`);
+            break;
         default:
-            console.log(shared.unrecognizedCommand);
             response.push(shared.unrecognizedCommand);
     }
     return response;

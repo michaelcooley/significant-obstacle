@@ -20,7 +20,6 @@ export function dropItem(player, location, items, itemName) {
                 response.push(`${item.shortDescription} dropped`);
             }
             player.weightCarried -= item.weight;
-            console.log(`player carrying: ${player.weightCarried}`)
         }
     });
 

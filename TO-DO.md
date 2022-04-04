@@ -24,7 +24,7 @@
 22. **DONE** implement 'use' so objects can be used to do things at certain locations
 23. **DONE** implement optional item pick up and drop messages
 24. **DONE** code cleanup part 2 -- App move duplicate code to functions in and put in separate files
-25. code cleanup part 3 -- remove excess console logging
+25. **DONE** code cleanup part 3 -- remove excess console logging
 26. **DONE** implement 'take all' command
 27. **DONE** implement 'drop all' command
 28. **DONE** implement points from using items
@@ -34,14 +34,18 @@
 32. **DONE** add underground maze and marble
 33. Detect when they reach max points and do WON GAME
 34. **DONE** add swamp, tower, waterfall, lagoon and barrel
-35. implement player health starting at 100. if it reaches 0 you die
-36. implement dangerous things that can damage player health
-37. **DONE** make using an item make another item appear (releasing dove on tower makes guitar appear)
-38. **DONE** make using key produce box of sand
-39. make using HDMI cable do something
-40. make using flare gun do something
-41. make using box of sand do something
-42. implement gremlin (NPC) that shows up and takes things from you and drops them elsewhere
+35. **DONE** implement player health starting at 100.
+36. implement death if health reaches 0 
+37. **DONE** implement dangerous things that can damage player health
+38. **DONE** make using an item make another item appear (releasing dove on tower makes guitar appear)
+39. **DONE** make using key produce box of sand
+40. make using HDMI cable do something
+41. make using flare gun do something
+42. make using box of sand do something
+43. implement gremlin (NPC) that shows up and takes things from you and drops them elsewhere
+44. **DONE** implement items causing damage (snake)
+45. **DONE** implement basic 'eat' command
+46. make an edible object that restores health
 
 
 

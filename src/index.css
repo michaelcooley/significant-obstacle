@@ -22,7 +22,7 @@ code {
 
 .start-game-row-container {
   display: flex;
-  width: 350px;
+  width: 450px;
   height: 20px;
   margin-top: 20px;
   margin-left: 30px;
@@ -40,6 +40,16 @@ code {
 }
 
 .score-container {
+  display: flex;
+  width: 180px;
+  height: 30px;
+  margin-top: 12px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.health-container {
   display: flex;
   width: 180px;
   height: 30px;

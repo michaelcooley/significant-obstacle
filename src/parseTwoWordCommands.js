@@ -3,9 +3,10 @@ import {takeItem} from "./takeItem";
 import {takeExit} from "./takeExit";
 import {inspectItem} from "./inspectItem";
 import {activateItem} from "./activateItem";
+import {eatItem} from "./eatItem";
 import { shared } from "./shared";
 
-export function parseTwoWordCommands(words, response, location, player, items, moveLocation) {
+export function parseTwoWordCommands(words, response, location, player, items, moveLocation, damagePlayer) {
     switch (words[0]) {
         case 'drop':
         case 'throw':
@@ -13,7 +14,7 @@ export function parseTwoWordCommands(words, response, location, player, items, m
             break;
         case 'get':
         case 'take':
-            response = takeItem(player, location, items, words[1]);
+            response = takeItem(player, location, items, words[1], damagePlayer);
             break;
         case 'go':
         case 'walk':
@@ -27,8 +28,10 @@ export function parseTwoWordCommands(words, response, location, player, items, m
         case 'use':
             response = activateItem(player, location, items, words[1], moveLocation);
             break;
+        case 'eat':
+            response = eatItem(player, location, items, words[1], damagePlayer);
+            break;
         default:
-            console.log(shared.unrecognizedCommand);
             response.push(shared.unrecognizedCommand);
     }
     return response;
