@@ -3,6 +3,6 @@ export var shared = {
     maxCarryWeight: 99,
     outputRows: 15,
     outputLineCharacters: 70,
-    maxScore: 100,
+    maxScore: 10,
     maxHealth: 100
 }

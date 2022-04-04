@@ -170,9 +170,10 @@
     "location": "",
     "weight": 1,
     "use": {
-      "where": "",
-      "useMessage": "You fire the flare gun into the air.",
-      "newLocation": ""
+      "where": "clearing",
+      "useMessage": "You fire the flare gun into the air. The helicopter stops circling and gets closer. Just as you think it's going to land, the pilot throws a black cable out of the window and then heads back skyward.",
+      "newLocation": "clearing",
+      "newItem": "cable"
     }
   },
   {
@@ -184,5 +185,15 @@
     "location": "swamp",
     "weight": 1,
     "damage": 10
+  },
+  {
+    "name": "booster",
+    "shortDescription": "booster",
+    "longDescription": "The booster looks like a chocolate donut, but you know it must have an embedded tracking device.",
+    "pickupMessage": "You shove the whole thing in your mouth at once, like an animal. Your skin tingles and the back of your neck goes cold.",
+    "initialLocation": "clearing",
+    "location": "clearing",
+    "weight": 1,
+    "damage": -10
   }
 ]

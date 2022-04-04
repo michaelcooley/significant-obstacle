@@ -395,6 +395,10 @@
       {
         "name": "west",
         "linksTo": "node farm"
+      },
+      {
+        "name": "north",
+        "linksTo": "clearing"
       }
     ]
   },
@@ -483,6 +487,17 @@
     "exits": [
       {
         "name": "east",
+        "linksTo": "swamp"
+      }
+    ]
+  },
+  {
+    "name": "clearing",
+    "shortDescription": "a clearing in the forest",
+    "longDescription": "This is a circular clearing in the middle of a forest. High above you can see a helicopter circling, but they pay no attention to you.",
+    "exits": [
+      {
+        "name": "south",
         "linksTo": "swamp"
       }
     ]

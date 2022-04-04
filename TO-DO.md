@@ -32,7 +32,7 @@
 30. **DONE** show score as XX/TotalPossible or XX of Total Possible
 31. **DONE** implement 'spooky glass' item and locations
 32. **DONE** add underground maze and marble
-33. Detect when they reach max points and do WON GAME
+33. **DONE** Detect when they reach max points and do WIN GAME
 34. **DONE** add swamp, tower, waterfall, lagoon and barrel
 35. **DONE** implement player health starting at 100.
 36. implement death if health reaches 0 
@@ -40,13 +40,15 @@
 38. **DONE** make using an item make another item appear (releasing dove on tower makes guitar appear)
 39. **DONE** make using key produce box of sand
 40. make using HDMI cable do something
-41. make using flare gun do something
-42. make using box of sand do something
+41. **DONE** make using flare gun do something
+42. **DONE** make using box of sand do something
 43. implement gremlin (NPC) that shows up and takes things from you and drops them elsewhere
 44. **DONE** implement items causing damage (snake)
 45. **DONE** implement basic 'eat' command
-46. make an edible object that restores health
-47. implement jump
+46. **DONE** (booster) make an edible object that restores health
+47. **DONE** implement jump
+48. make descriptions better and funnier
+
 
 
 

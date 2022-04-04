@@ -10,6 +10,7 @@ import locationData from './world/locations.json';
 import itemData from './world/items.json';
 import playerData from './world/player.json';
 import { describeLocation } from "./describeLocation";
+import {WinningBanner} from "./winningBanner";
 import { shared } from "./shared";
 
 class App extends React.Component {
@@ -17,6 +18,7 @@ class App extends React.Component {
         super(props);
         this.state = {
             gameRunning: false,
+            gameOver: false,
             score: 0,
             health: shared.maxHealth,
             maxScore: shared.maxScore,
@@ -34,6 +36,18 @@ class App extends React.Component {
 
         if (points && points > 0) {
             this.setState({score: this.state.score + points});
+            if (points >= shared.maxScore) {
+                this.pushOutputText('');
+                this.pushOutputText('');
+                this.pushOutputText('');
+                this.pushOutputText('');
+                this.pushOutputText('Game Over!');
+                this.pushOutputText('You won!');
+                this.pushOutputText('');
+                this.setState({gameOver: true});
+                this.setState({gameRunning: false});
+                return;
+            }
         }
 
         if (preText && preText.length > 0) {
@@ -111,6 +125,7 @@ class App extends React.Component {
 
       //copy default player information in
       this.setState({playerData: playerData});
+      this.setState({gameOver: false});
       let loadedLocations = [];
       Object.keys(locationData).forEach(function(key) {
           loadedLocations.push(locationData[key]);
@@ -145,6 +160,7 @@ class App extends React.Component {
         <div className="App">
           <TitleBar version="0.1"/>
           <Description/>
+          <WinningBanner gameOver={this.state.gameOver}/>
           <StartGameHealthAndScore onClick={this.startGame} score={this.state.score} maxScore={this.state.maxScore} health={this.state.health}/>
           <OutputWindow outputList={this.state.outputList}/>
           <CommandWindow onKeyPress={this.commandEntered} />

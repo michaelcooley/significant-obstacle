@@ -18,6 +18,9 @@ export function takeItem(player, location, items, itemName, damagePlayer) {
             if (player.weightCarried + item.weight < shared.maxCarryWeight) {
                 if (item.damage) {
                     damagePlayer(item.damage);      //if it causes damage, it never gets truly picked up
+                    if (item.damage < 0) {          //if it restores help, make it vanish after one use
+                        item.location = '';
+                    }
                 } else {
                     changeItemLocation(items, itemName, 'player');
                 }

@@ -117,3 +117,14 @@ code {
 li {
   min-height: 1.6em;  /* keep list from collapsing when lines are blank */
 }
+
+.winning-banner-container {
+  display: flex;
+  width: 480px;
+  height: 30px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  font-color: red;
+  background-color: cornflowerblue;
+}
