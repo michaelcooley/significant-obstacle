@@ -6,11 +6,11 @@ export function OutputWindow(props) {
 
     let index = 0;
     const listItems = outputList.map((line) =>
-        <li value={index++} >{line}</li>
+        <li key={index++} >{line}</li>
     );
 
-    return <div class="output-window-container">
-        <ol class="list-no-bullets">
+    return <div className="output-window-container">
+        <ol className="list-no-bullets">
             {listItems}
         </ol>
     </div>

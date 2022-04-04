@@ -12,10 +12,11 @@
   {
     "name": "pencil",
     "shortDescription": "pencil",
-    "longDescription": "This pencil is yellow, and sharpened. It's a number 3 pencil, which makes it one better than your average pencil.",
+    "longDescription": "This pencil is yellow, and sharpened. It's a #3 pencil, which makes it one better than your average pencil.",
     "initialLocation": "player",
     "location": "player",
-    "weight": 1
+    "weight": 1,
+    "pickupMessage": "You grab the pencil and tuck it behind one ear like a science professor."
   },
   {
     "name": "gum",
@@ -113,7 +114,7 @@
     "location": "",
     "weight": 5,
     "use": {
-      "where": "mushroom",
+      "where": "clearing",
       "useMessage": "You start playing Stairway to Heaven. A Gnome shows up and slaps you.",
       "newLocation": "maze-l"
     }

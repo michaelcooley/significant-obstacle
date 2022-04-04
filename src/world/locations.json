@@ -435,7 +435,7 @@
   {
     "name": "waterfall",
     "shortDescription": "waterfall",
-    "longDescription": "waterfall",
+    "longDescription": "The river flows over the edge here, forming a loud and powerful waterfall.",
     "exits": [
       {
         "name": "west",
@@ -446,7 +446,7 @@
   {
     "name": "lagoon",
     "shortDescription": "lagoon",
-    "longDescription": "lagoon",
+    "longDescription": "Here lies a peaceful lagoon, surrounded by trees. In the distance to the west is a waterfall.",
     "exits": [
       {
         "name": "west",
@@ -460,7 +460,7 @@
   },
   {
     "name": "doorway",
-    "shortDescription": "there is a locked door here",
+    "shortDescription": "locked doorway",
     "longDescription": "The door is locked and you can't see anything through the keyhole.",
     "exits": [
       {
@@ -494,7 +494,7 @@
   {
     "name": "clearing",
     "shortDescription": "a clearing in the forest",
-    "longDescription": "This is a circular clearing in the middle of a forest. High above you can see a helicopter circling, but they pay no attention to you.",
+    "longDescription": "This is a circular clearing in the middle of a forest. High above you can see a helicopter circling, but they pay no attention to you. You are standing on a small stage.",
     "exits": [
       {
         "name": "south",
