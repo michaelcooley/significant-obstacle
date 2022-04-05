@@ -185,7 +185,7 @@ class App extends React.Component {
         }
         this.setState({outputText: newOutputList});
   }
-
+  
   damagePlayer = (points) => {
         this.setState({health: ((this.state.health - points) >= 0) ? (this.state.health - points) : 0});
         if (this.state.health - points <= 0) {
@@ -214,6 +214,10 @@ class App extends React.Component {
       Object.keys(itemData).forEach(function(key) {
           loadedItems.push(itemData[key]);
       });
+
+      for (let i = 0; i < shared.outputRows; i++) {     //blank rows in case we are restarting
+          this.pushOutputText("");
+      }
       //find initial location, set current location to it and update output
       loadedLocations.forEach(loc => {
           if (loc.name === this.state.initialLocationName) {

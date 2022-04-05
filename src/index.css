@@ -13,6 +13,10 @@ code {
     monospace;
 }
 
+.titlebar-container {
+  margin-left: 10px;
+}
+
 .description {
   width: 80%;
   text-align: left;
@@ -97,8 +101,6 @@ code {
   margin-left: 5px;
   margin-top: 40px;
   margin-bottom: 40px;
-  /*border: cadetblue;
-  border-width: 1px;*/
   font-size: small;
 }
 
@@ -149,4 +151,46 @@ li {
   margin-top: 20px;
   transform: scale(.8); /* scale down */
   -webkit-transform-origin-x: 0; /* align text left after scaling */
+}
+
+@media only screen and (max-width: 450px) {
+
+  .start-game-row-container {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  .score-container {
+    font-size: 14px;
+  }
+
+  .health-container {
+    font-size: 14px;
+  }
+
+  .start-game-button-container {
+    font-size: 14px;
+    margin-top: 8px;
+    margin-left: 0px;
+    height: 25px;
+  }
+
+  .output-window-container {
+    width: 100%;
+    margin: 20px 0px;
+  }
+
+  .command-input-container {
+    margin-left: 5px;
+  }
+
+  .winning-banner-container {
+    width: 100%;
+  }
+
+  .the-reaper-banner-container {
+    width: 100%;
+  }
+
 }
