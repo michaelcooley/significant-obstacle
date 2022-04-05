@@ -206,10 +206,6 @@ class App extends React.Component {
   }
 
   startGame = () => {
-
-      //copy default player information in
-      this.setState({playerData: playerData});
-      this.setState({gameOver: false});
       let loadedLocations = [];
       Object.keys(locationData).forEach(function(key) {
           loadedLocations.push(locationData[key]);
@@ -234,8 +230,11 @@ class App extends React.Component {
 
       this.setState({locations: loadedLocations});
       this.setState({items: loadedItems});
+      this.setState({playerData: playerData});
+      this.setState({gameOver: false});
       this.setState({score: 0});
       this.setState({gameRunning: true});
+      this.setState({health: shared.maxHealth});
   }
 
   onSoundEnableChanged = (event) => {
