@@ -4,6 +4,7 @@ export function activateItem(player, location, items, itemName, moveLocation) {
     let found = false;
     let newLocation = '';
     let newParser = '';
+    let points = 0;
     items.forEach(item => {
         if (item.name === itemName && item.location === 'player') {   //found it
             found = true;
@@ -24,6 +25,11 @@ export function activateItem(player, location, items, itemName, moveLocation) {
                     if (item.use.parser) {
                         newParser = item.use.parser;
                     }
+                    //after item is used, clear points so using it again isn't worth anything
+                    if (item.use.points) {
+                        points = item.use.points;
+                        item.use.points = 0;
+                    }
                     activated = true;
                     return;
                 } else {
@@ -39,7 +45,7 @@ export function activateItem(player, location, items, itemName, moveLocation) {
         response.push(`You are not carrying ${itemName}`);
     }
     if (activated) {
-        moveLocation(newLocation, response, 10, newParser);
+        moveLocation(newLocation, response, points, newParser);
         return;
     }
 

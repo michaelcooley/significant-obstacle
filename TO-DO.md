@@ -28,14 +28,14 @@
 26. **DONE** implement 'take all' command
 27. **DONE** implement 'drop all' command
 28. **DONE** implement points from using items
-29. **FIXED** use command doesn't clear input box
+29. **DONE** fix use command doesn't clear input box
 30. **DONE** show score as XX/TotalPossible or XX of Total Possible
 31. **DONE** implement 'spooky glass' item and locations
 32. **DONE** add underground maze and marble
 33. **DONE** Detect when they reach max points and do WIN GAME
 34. **DONE** add swamp, tower, waterfall, lagoon and barrel
 35. **DONE** implement player health starting at 100.
-36. implement death if health reaches 0 
+36. **DONE** implement death if health reaches 0 
 37. **DONE** implement dangerous things that can damage player health
 38. **DONE** make using an item make another item appear (releasing dove on tower makes guitar appear)
 39. **DONE** make using key produce box of sand
@@ -49,7 +49,10 @@
 47. **DONE** implement jump
 48. make descriptions better and funnier
 49. **DONE** implement special parser for wordle imposter, triggered by hooking up HDMI cable
-
+50. **DONE** add more dangerous things to take away health
+51. **DONE** add optional sounds and a checkbox to enable. have a 'ding' sound for getting points a 'bloop' sound for taking damage and a noise for dying and winning
+52. **DONE** fix location of sound checkbox
+53. **DONE** don't let health go negative when player dies
 
 
 

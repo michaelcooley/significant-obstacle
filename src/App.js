@@ -13,6 +13,13 @@ import { describeLocation } from "./describeLocation";
 import {WinningBanner} from "./winningBanner";
 import { shared } from "./shared";
 import {WordPuzzleParser} from "./wordPuzzleParser";
+import {TheReaper} from "./theReaper";
+import { SoundEnable } from './soundEnable';
+import dingSound from './sounds/ding.wav';
+import ouchSound from './sounds/ouch.wav';
+import gulpSound from './sounds/gulp.wav';
+import victorySound from './sounds/victory.wav';
+import failureSound from './sounds/failure.wav';
 
 class App extends React.Component {
     constructor(props) {
@@ -32,7 +39,9 @@ class App extends React.Component {
             outputList: Array(shared.outputRows).fill(""),
             parser: undefined,
             guessesLeft: 0,
-            prompt: shared.defaultPrompt
+            prompt: shared.defaultPrompt,
+            playerDied: false,
+            soundEnabled: false
         }
     };
 
@@ -46,7 +55,7 @@ class App extends React.Component {
 
         if (points && points > 0) {
             this.setState({score: this.state.score + points});
-            if (points >= shared.maxScore) {
+            if (this.state.score + points >= shared.maxScore) {
                 this.pushOutputText('');
                 this.pushOutputText('');
                 this.pushOutputText('');
@@ -56,7 +65,10 @@ class App extends React.Component {
                 this.pushOutputText('');
                 this.setState({gameOver: true});
                 this.setState({gameRunning: false});
-                return;
+                this.playVictorySound();
+                //return;
+            } else {
+                this.playDingSound();
             }
         }
 
@@ -104,6 +116,7 @@ class App extends React.Component {
             this.pushOutputText('');
             this.setState({gameOver: true});
             this.setState({gameRunning: false});
+            this.playVictorySound();
         } else {
             if (newLocation !== '') {
                 this.state.locations.forEach(loc => {
@@ -136,14 +149,16 @@ class App extends React.Component {
               this.pushOutputText("");
               this.pushOutputText(`\n> ${command}`);    //add user input to output window
               this.pushOutputText("");
-              let response = '';
+              let response = [];
               if (this.state.parser && this.state.parser === 'wordPuzzle') {
                   response = WordPuzzleParser(command, location, this.state.items, this.updateParser, this.state.guessesLeft, this.updateGuessesLeft, player);
               } else {
                   response = GameEngine(command, location, this.state.items, this.moveLocation, player, this.damagePlayer);
               }
-              for (const line of response) {
-                  this.pushOutputText(line);
+              if (response && response.length > 0) {
+                  for (const line of response) {
+                      this.pushOutputText(line);
+                  }
               }
           }
       }
@@ -172,7 +187,18 @@ class App extends React.Component {
   }
 
   damagePlayer = (points) => {
-        this.setState({health: this.state.health - points});
+        this.setState({health: ((this.state.health - points) >= 0) ? (this.state.health - points) : 0});
+        if (this.state.health - points <= 0) {
+            this.setState({playerDied: true});
+            this.setState({gameRunning: false});
+            this.playFailureSound();
+        } else {
+            if (points > 0) {
+                this.playOuchSound();
+            } else {
+                this.playGulpSound();
+            }
+        }
   }
 
   updateGuessesLeft = () => {
@@ -212,6 +238,48 @@ class App extends React.Component {
       this.setState({gameRunning: true});
   }
 
+  onSoundEnableChanged = (event) => {
+        let enabled = event.target.checked;
+        console.log('sound enable change: ' + enabled);
+
+        this.setState({soundEnabled: enabled});
+  }
+
+  playDingSound = () => {
+        if (this.state.soundEnabled) {
+            let audio = new Audio(dingSound);
+            audio.play();
+        }
+  }
+
+  playGulpSound = () => {
+        if (this.state.soundEnabled) {
+            let audio = new Audio(gulpSound);
+            audio.play();
+        }
+  }
+
+  playOuchSound = () => {
+        if (this.state.soundEnabled) {
+            let audio = new Audio(ouchSound);
+            audio.play();
+        }
+  }
+
+  playVictorySound = () => {
+        if (this.state.soundEnabled) {
+            let audio = new Audio(victorySound);
+            audio.play();
+        }
+  }
+
+  playFailureSound = () => {
+        if (this.state.soundEnabled) {
+            let audio = new Audio(failureSound);
+            audio.play();
+        }
+  }
+
   render()
   {
     return (
@@ -219,7 +287,8 @@ class App extends React.Component {
           <TitleBar version="0.1"/>
           <Description/>
           <WinningBanner gameOver={this.state.gameOver}/>
-          <StartGameHealthAndScore onClick={this.startGame} score={this.state.score} maxScore={this.state.maxScore} health={this.state.health}/>
+          <TheReaper death={this.state.playerDied}/>
+          <StartGameHealthAndScore onClick={this.startGame} score={this.state.score} maxScore={this.state.maxScore} health={this.state.health} checked={this.state.soundEnabled} onChange={this.onSoundEnableChanged} />
           <OutputWindow outputList={this.state.outputList}/>
           <CommandWindow onKeyPress={this.commandEntered} prompt={this.state.prompt} />
         </div>

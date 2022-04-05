@@ -149,7 +149,7 @@
     "exits": [
       {
         "name": "north",
-        "linksTo": "maze-b"
+        "linksTo": "maze-d"
       },
       {
         "name": "south",
@@ -157,7 +157,7 @@
       },
       {
         "name": "east",
-        "linksTo": "maze-b"
+        "linksTo": "maze-k"
       },
       {
         "name": "west",
@@ -344,7 +344,7 @@
     "exits": [
       {
         "name": "north",
-        "linksTo": "maze-k"
+        "linksTo": "maze-c"
       },
       {
         "name": "south",
@@ -356,7 +356,7 @@
       },
       {
         "name": "west",
-        "linksTo": "maze-k"
+        "linksTo": "maze-e"
       }
     ]
   },
@@ -379,7 +379,7 @@
       },
       {
         "name": "west",
-        "linksTo": "maze-d"
+        "linksTo": "maze-b"
       }
     ]
   },

@@ -128,3 +128,25 @@ li {
   font-color: red;
   background-color: cornflowerblue;
 }
+
+.the-reaper-banner-container {
+  display: flex;
+  width: 480px;
+  height: 30px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  font-color: white;
+  background-color: red;
+}
+
+.sound-enable-container {
+  display: flex;
+  width: 25%;
+  color: black;
+  font-weight: normal;
+  font-size: small;
+  margin-top: 20px;
+  transform: scale(.8); /* scale down */
+  -webkit-transform-origin-x: 0; /* align text left after scaling */
+}

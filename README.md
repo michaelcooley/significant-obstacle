@@ -1,6 +1,7 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Significant Obstacle
+Significant Obstacle is a small text adventure style game. It understands simple
+commands and simple minds. The goal is to walk around, solve puzzles, and get all the points. Oh, and don't die.
+That looks bad on your record.
 
 ## Available Scripts
 
