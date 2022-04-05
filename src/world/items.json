@@ -191,7 +191,7 @@
   {
     "name": "snake",
     "shortDescription": "poisonous snake",
-    "longDescription": "The snake is a Nazi, which you can tell from the look in it's eyes--and the red MAGA hat.",
+    "longDescription": "The snake is a Nazi, which you can tell from the look in its eyes--and the red MAGA hat.",
     "pickupMessage": "Why would you do that? It bites you on the arm and you drop it.",
     "initialLocation": "swamp",
     "location": "swamp",
