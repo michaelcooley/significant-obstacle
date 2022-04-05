@@ -185,7 +185,7 @@ class App extends React.Component {
         }
         this.setState({outputText: newOutputList});
   }
-  
+
   damagePlayer = (points) => {
         this.setState({health: ((this.state.health - points) >= 0) ? (this.state.health - points) : 0});
         if (this.state.health - points <= 0) {
@@ -235,6 +235,7 @@ class App extends React.Component {
       this.setState({locations: loadedLocations});
       this.setState({items: loadedItems});
       this.setState({playerData: playerData});
+      this.setState({playerDied: false});
       this.setState({gameOver: false});
       this.setState({score: 0});
       this.setState({gameRunning: true});

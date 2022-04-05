@@ -24,12 +24,13 @@
     "longDescription": "The gum is a small wad of pink goo. It looks like it has already been chewed, but not by you.",
     "initialLocation": "player",
     "location": "player",
-    "weight": 1
+    "weight": 1,
+    "pickupMessage": "Ewwww..."
   },
   {
     "name": "library",
     "shortDescription": "javascript library",
-    "longDescription": "The javascript library resembles a carved wooden box.",
+    "longDescription": "The javascript library resembles a carved wooden box, which reminds you of Hellraiser, except javascript is far more dangerous.",
     "initialLocation": "mushroom",
     "location": "mushroom",
     "weight": 100
@@ -74,7 +75,7 @@
     "weight": 1,
     "use": {
       "where": "van",
-      "useMessage": "You hold the marble up and suddenly you hear keyboards in the distance. The Bee-Gees poster on the wall seems to suddenly come to life.",
+      "useMessage": "You hold the marble up and suddenly you hear keyboards in the distance. The Bee-Gees poster on the wall seems to suddenly come to life. And then the van fades away.",
       "newLocation": "bunker",
       "points": 10
     }
@@ -89,7 +90,7 @@
     "weight": 40,
     "use": {
       "where": "waterfall",
-      "useMessage": "You climb into the barrel, like an idiot, and roll into the river just above the waterfall. The strong current carries you over the falls.",
+      "useMessage": "You climb into the barrel, like an idiot, and roll into the river just above the waterfall. The strong current carries you over the falls. There is a thunderous roar and the barrel gets tossed and turned before landing far below in a pool. Once the barrel comes to a stop you realize there is still an idiot in it, so you get out.",
       "newLocation": "lagoon",
       "points": 10
     }
@@ -104,7 +105,7 @@
     "weight": 3,
     "use": {
       "where": "tower",
-      "useMessage": "You release the dove and it spirals toward the sun, looking down at you one last time. A guitar appears at your feet.",
+      "useMessage": "You release the dove and it spirals toward the sun, looking down at you one last time. It sings, Don't fear the repo! A guitar appears at your feet.",
       "newLocation": "tower",
       "newItem": "guitar",
       "points": 10
@@ -120,7 +121,7 @@
     "weight": 5,
     "use": {
       "where": "clearing",
-      "useMessage": "You start playing Stairway to Heaven. A Gnome shows up and slaps you.",
+      "useMessage": "You start playing Stairway to Heaven. A Gnome shows up, slaps you, and says--somewhat mysteriously--you keep my wife's name outta yer mouth!",
       "newLocation": "maze-l",
       "points": 10
     }
@@ -129,7 +130,7 @@
     "name": "key",
     "shortDescription": "gold key",
     "longDescription": "The key is ornate and made out of gold. It has a ruby jewel on the handle.",
-    "pickupMessage": "You pick up the key",
+    "pickupMessage": "You pick up the key and turn it over, inspecting its intricate design.",
     "initialLocation": "",
     "location": "maze-c",
     "weight": 1,
@@ -143,14 +144,14 @@
   {
     "name": "cable",
     "shortDescription": "HDMI cable",
-    "longDescription": "The HDMI cable is black and three meters long.",
+    "longDescription": "The HDMI cable is black and two meters long.",
     "pickupMessage": "You pick up the cable and wrap it around your waist like a belt.",
     "initialLocation": "",
     "location": "",
     "weight": 1,
     "use": {
       "where": "bunker",
-      "useMessage": "You plug one end of the cable into the trashcan, and the other end into the rectangular screen on the wall. There's a flicker and then the image resolves into a line of text that reads, GUESS MY WORD! IT'S 6 CHARACTERS LONG! FOR EACH LETTER YOU GET RIGHT, I WILL PRINT A 'C' UNLESS IT'S IN THE WRONG SPOT. THOSE WILL GET A 'W'. LETTERS THAT AREN'T EVEN IN MY WORD GET AN 'X'. You only have 6 guesses before you lose your marble.",
+      "useMessage": "You plug one end of the cable into the trashcan, and the other end into the rectangular screen on the wall. There's a flicker and then the image resolves into a line of text that reads, GUESS MY WORD! IT'S 6 CHARACTERS LONG! FOR EACH LETTER YOU GET RIGHT, I WILL PRINT A 'C' UNLESS IT'S IN THE WRONG SPOT. THOSE WILL GET A 'W'. LETTERS THAT AREN'T EVEN IN MY WORD GET AN 'X'. YOU ONLY HAVE 6 GUESSES BEFORE YOU LOSE YOUR MARBLE.",
       "newLocation": "",
       "parser": "wordPuzzle",
       "points": 10
@@ -159,14 +160,14 @@
   {
     "name": "sand",
     "shortDescription": "box of sand",
-    "longDescription": "The box of sand weighs a few pounds. On the side of the box it says 'Sand?'",
-    "pickupMessage": "You pick up sand, which is in a box.",
+    "longDescription": "The box of sand weighs a few pounds. On the side of the box it says Moo...?",
+    "pickupMessage": "You pick up sand, which is in a box. The box is shaped like a box, and the sand is shaped like sand.",
     "initialLocation": "",
     "location": "",
     "weight": 1,
     "use": {
       "where": "node farm",
-      "useMessage": "You pour the sand into the node farm and the nodes begin singing a happy song. A flare gun appears in mid-air and then lands softly at your feet.",
+      "useMessage": "You pour the sand into the node farm and the nodes begin to perk up, and then start singing a happy song. A flare gun appears in mid-air and then lands softly at your feet.",
       "newLocation": "node farm",
       "newItem": "gun",
       "points": 10
@@ -191,8 +192,8 @@
   {
     "name": "snake",
     "shortDescription": "poisonous snake",
-    "longDescription": "The snake is a Nazi, which you can tell from the look in its eyes--and the red MAGA hat.",
-    "pickupMessage": "Why would you do that? It bites you on the arm and you drop it.",
+    "longDescription": "The snake is a Nazi, which you can tell from the look in its eyes...and the red MAGA hat.",
+    "pickupMessage": "Why would you do that? It bites you on the ass and you drop it.",
     "initialLocation": "swamp",
     "location": "swamp",
     "weight": 1,
@@ -201,7 +202,7 @@
   {
     "name": "booster",
     "shortDescription": "booster",
-    "longDescription": "The booster looks like a chocolate donut, but you know it must have an embedded tracking device.",
+    "longDescription": "The booster looks like a chocolate donut, but you know it's just a trick to save your life, and it must have an embedded tracking device.",
     "pickupMessage": "You shove the whole thing in your mouth at once, like an animal. Your skin tingles and the back of your neck goes cold.",
     "initialLocation": "clearing",
     "location": "clearing",
@@ -210,7 +211,7 @@
   },
   {
     "name": "bucket",
-    "shortDescription": "bucket",
+    "shortDescription": "bucket of acid",
     "longDescription": "The bucket is full of acid and smells like a bad idea.",
     "pickupMessage": "You are a little clumsy and the acid spills all over your face. You drop the bucket and scream a little.",
     "initialLocation": "lagoon",
