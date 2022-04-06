@@ -6,7 +6,7 @@ import {activateItem} from "./activateItem";
 import {eatItem} from "./eatItem";
 import { shared } from "./shared";
 
-export function parseTwoWordCommands(words, response, location, player, items, moveLocation, damagePlayer) {
+export function parseTwoWordCommands(words, response, location, player, items, moveLocation, damagePlayer, npcData) {
     switch (words[0]) {
         case 'drop':
         case 'throw':
@@ -23,7 +23,7 @@ export function parseTwoWordCommands(words, response, location, player, items, m
             break;
         case 'examine':
         case 'inspect':
-            response = inspectItem(player, location, items, words[1]);
+            response = inspectItem(player, location, items, words[1], npcData);
             break;
         case 'use':
             response = activateItem(player, location, items, words[1], moveLocation);

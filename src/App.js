@@ -9,17 +9,19 @@ import { OutputWindow } from "./outputWindow";
 import locationData from './world/locations.json';
 import itemData from './world/items.json';
 import playerData from './world/player.json';
+import npcData from "./world/npc.json";
 import { describeLocation } from "./describeLocation";
 import {WinningBanner} from "./winningBanner";
 import { shared } from "./shared";
 import {WordPuzzleParser} from "./wordPuzzleParser";
 import {TheReaper} from "./theReaper";
-import { SoundEnable } from './soundEnable';
 import dingSound from './sounds/ding.wav';
 import ouchSound from './sounds/ouch.wav';
 import gulpSound from './sounds/gulp.wav';
 import victorySound from './sounds/victory.wav';
 import failureSound from './sounds/failure.wav';
+import {npcActions} from "./npcActions";
+
 
 class App extends React.Component {
     constructor(props) {
@@ -31,6 +33,7 @@ class App extends React.Component {
             health: shared.maxHealth,
             maxScore: shared.maxScore,
             initialLocationName: 'van',
+            initialNPCLocationName: 'mushroom',
             currentLocation: undefined,
             currentDescription: 'nowhere',
             playerData: undefined,
@@ -41,7 +44,9 @@ class App extends React.Component {
             guessesLeft: 0,
             prompt: shared.defaultPrompt,
             playerDied: false,
-            soundEnabled: false
+            soundEnabled: false,
+            currentNPCLocation: undefined,
+            npcData: undefined
         }
     };
 
@@ -89,6 +94,9 @@ class App extends React.Component {
                         for (const line of response) {
                             this.pushOutputText(line);
                         }
+                    }
+                    if (this.state.currentNPCLocation.name === loc.name) { //if NPC is here, describe him
+                       this.pushOutputText(`${this.state.npcData.name} is here.`);
                     }
                 }
             });
@@ -145,6 +153,7 @@ class App extends React.Component {
               let command = event.target.value;
               let location = this.state.currentLocation;
               let player = this.state.playerData;
+              let npcData = this.state.npcData;
               event.target.value = '';
               this.pushOutputText("");
               this.pushOutputText(`\n> ${command}`);    //add user input to output window
@@ -153,13 +162,17 @@ class App extends React.Component {
               if (this.state.parser && this.state.parser === 'wordPuzzle') {
                   response = WordPuzzleParser(command, location, this.state.items, this.updateParser, this.state.guessesLeft, this.updateGuessesLeft, player);
               } else {
-                  response = GameEngine(command, location, this.state.items, this.moveLocation, player, this.damagePlayer);
+                  response = GameEngine(command, location, this.state.items, this.moveLocation, player, this.damagePlayer, npcData);
               }
               if (response && response.length > 0) {
                   for (const line of response) {
                       this.pushOutputText(line);
                   }
               }
+          }
+          let newLocation = npcActions(this.state.currentNPCLocation, this.state.npcData, this.state.locations, this.state.items);
+          if (newLocation.name !== this.state.currentNPCLocation.name) {
+              this.setState({currentNPCLocation: newLocation});
           }
       }
   }
@@ -230,11 +243,15 @@ class App extends React.Component {
                   }
               }
           }
+          if (loc.name === this.state.initialNPCLocationName) {
+              this.setState({currentNPCLocation: loc});
+          }
       });
 
       this.setState({locations: loadedLocations});
       this.setState({items: loadedItems});
       this.setState({playerData: playerData});
+      this.setState({npcData: npcData});
       this.setState({playerDied: false});
       this.setState({gameOver: false});
       this.setState({score: 0});

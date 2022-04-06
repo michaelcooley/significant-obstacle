@@ -218,5 +218,13 @@
     "location": "lagoon",
     "weight": 1,
     "damage": 30
+  },
+  {
+    "name": "notepad",
+    "shortDescription": "notepad",
+    "longDescription": "The notepad is small, with a black leather cover.",
+    "initialLocation": "npc",
+    "location": "npc",
+    "weight": 3
   }
 ]

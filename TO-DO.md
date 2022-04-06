@@ -42,17 +42,21 @@
 40. **DONE** make using HDMI cable do something
 41. **DONE** make using flare gun do something
 42. **DONE** make using box of sand do something
-43. implement gremlin (NPC) that shows up and takes things from you and drops them elsewhere
-44. **DONE** implement items causing damage (snake)
-45. **DONE** implement basic 'eat' command
-46. **DONE** (booster) make an edible object that restores health
-47. **DONE** implement jump
-48. make descriptions better and funnier
-49. **DONE** implement special parser for wordle imposter, triggered by hooking up HDMI cable
-50. **DONE** add more dangerous things to take away health
-51. **DONE** add optional sounds and a checkbox to enable. have a 'ding' sound for getting points a 'bloop' sound for taking damage and a noise for dying and winning
-52. **DONE** fix location of sound checkbox
-53. **DONE** don't let health go negative when player dies
-
+43. **DONE** implement items causing damage (snake)
+44. **DONE** implement basic 'eat' command
+45. **DONE** (booster) make an edible object that restores health
+46. **DONE** implement jump
+47. make descriptions better and funnier
+48. **DONE** implement special parser for wordle imposter, triggered by hooking up HDMI cable
+49. **DONE** add more dangerous things to take away health
+50. **DONE** add optional sounds and a checkbox to enable. have a 'ding' sound for getting points a 'bloop' sound for taking damage and a noise for dying and winning
+51. **DONE** fix location of sound checkbox
+52. **DONE** don't let health go negative when player dies
+53. **DONE** create NPC part 1: player can see him and examine him
+54. **DONE** create NPC part 2: NPC can move around randomly
+55. implement fight command / allow NPC to fight back
+56. create NPC part 3: NPC can talk
+57. create NPC part 4: NPC can pick up and drop things
+58. create NPC part 5: NPC can converse with player
 
 

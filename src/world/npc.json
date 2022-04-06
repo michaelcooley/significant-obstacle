@@ -1,0 +1,14 @@
+{
+  "name": "Bartholomew",
+  "description": "tall and thin",
+  "extraDetail": "he looks like he could kick your ass if you look at him funny",
+  "height": "2 meters",
+  "weight": "welterweight",
+  "percentMovement": 10,
+  "percentPickup": 2,
+  "percentDrop": 2,
+  "weightCarried": 3,
+  "items": [
+    {"name": "notepad" }
+  ]
+}
