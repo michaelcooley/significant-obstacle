@@ -33,6 +33,9 @@ export function parseOneWordCommands(word, words, response, location, player, it
         case 'jump':
             response.push(`You get one foot off the ground, but the other one refuses for religious reasons.`);
             break;
+        case 'fight':
+            response.push(`You punch yourself in the face and then yell, 'are you threatening me?!'`);
+            break;
         default:
             response.push(shared.unrecognizedCommand);
     }

@@ -21,6 +21,7 @@ import gulpSound from './sounds/gulp.wav';
 import victorySound from './sounds/victory.wav';
 import failureSound from './sounds/failure.wav';
 import {npcActions} from "./npcActions";
+import {npcDescriptionAndTalk} from "./npcDescriptionAndTalk";
 
 
 class App extends React.Component {
@@ -95,8 +96,13 @@ class App extends React.Component {
                             this.pushOutputText(line);
                         }
                     }
-                    if (this.state.currentNPCLocation.name === loc.name) { //if NPC is here, describe him
-                       this.pushOutputText(`${this.state.npcData.name} is here.`);
+                    if (this.state.currentNPCLocation.name === loc.name) { //if NPC is here, say so
+                        response = npcDescriptionAndTalk(npcData);
+                        if (response && response.length > 0) {
+                            for (const line of response) {
+                                this.pushOutputText(line);
+                            }
+                        }
                     }
                 }
             });

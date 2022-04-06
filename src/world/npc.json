@@ -1,5 +1,5 @@
 {
-  "name": "Bartholomew",
+  "name": "James",
   "description": "tall and thin",
   "extraDetail": "he looks like he could kick your ass if you look at him funny",
   "height": "2 meters",
@@ -7,8 +7,14 @@
   "percentMovement": 10,
   "percentPickup": 2,
   "percentDrop": 2,
+  "percentTalk": 25,
   "weightCarried": 3,
   "items": [
     {"name": "notepad" }
+  ],
+  "sayings": [
+    {"words": "You look like you are lost."},
+    {"words": "I'm just taking notes."},
+    {"words": "You humans are confusing."}
   ]
 }

@@ -1,4 +1,4 @@
-import {describeNPC} from "./describeNPC";
+import {examineNPC} from "./examineNPC";
 
 export function inspectItem(player, location, items, itemName, npcData) {
     let response = [];
@@ -16,7 +16,7 @@ export function inspectItem(player, location, items, itemName, npcData) {
     if (!found) {   //see if it's the NPC
         if (itemName.toLowerCase() === npcData.name.toLowerCase()) {
             console.log('NPC is here');
-            response = describeNPC(npcData, items, response);
+            response = examineNPC(npcData, items, response);
             found = true;
         }
     }
