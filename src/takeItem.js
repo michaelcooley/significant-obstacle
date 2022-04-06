@@ -2,7 +2,7 @@ import { changeItemLocation } from "./changeItemLocation";
 import { shared } from "./shared";
 import { takeAll } from "./takeAll";
 
-export function takeItem(player, location, items, itemName, damagePlayer) {
+export function takeItem(player, location, items, itemName, damagePlayer, npcData) {
     let response = [];
 
     if (itemName === 'all') {
@@ -40,6 +40,13 @@ export function takeItem(player, location, items, itemName, damagePlayer) {
             found = true;
         }
     });
+
+    if (!found) {   //check for npc
+        if (itemName.toLowerCase() === npcData.name.toLowerCase()) {
+            response.push(`${npcData.name} barks and waves a finger in your direction. I'll let you guess which finger.`);
+            found = true;
+        }
+    }
 
     if (!found) {
         response.push(`The ${itemName} is not here`);

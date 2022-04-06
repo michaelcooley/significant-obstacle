@@ -14,7 +14,7 @@ export function parseTwoWordCommands(words, response, location, player, items, m
             break;
         case 'get':
         case 'take':
-            response = takeItem(player, location, items, words[1], damagePlayer);
+            response = takeItem(player, location, items, words[1], damagePlayer, npcData);
             break;
         case 'go':
         case 'walk':
