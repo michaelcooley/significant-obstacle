@@ -10,8 +10,9 @@ export function describeExits(currentLoc) {
         for (const oneExit of currentLoc.exits) {
             exits += oneExit.name;
             count++;
-            if (count < currentLoc.exits.length) exits += ', ';
+            if (count < currentLoc.exits.length) exits += ' and ';
         }
+        exits += '.';
     } else {
         exits = 'There are no exits';
     }

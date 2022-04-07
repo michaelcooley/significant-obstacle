@@ -3,7 +3,7 @@ import { takeExit } from "./takeExit";
 import { listInventory } from "./listInventory";
 import { shared } from "./shared";
 
-export function parseOneWordCommands(word, words, response, location, player, items, moveLocation, currentNPCLocation, npcData) {
+export function parseOneWordCommands(word, words, response, location, player, items, moveLocation, damagePlayer, currentNPCLocation, npcData) {
     switch (words[0]) {
         case 'look':
         case 'l':

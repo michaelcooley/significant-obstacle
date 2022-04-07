@@ -11,7 +11,7 @@ export function npcInventory(response, npcData, items) {
     });
 
     if (count === 0) {
-        info += 'nothing';
+        info += 'nothing.';
     } else {
         let index = 0;
         itemNames.forEach(item => {
@@ -19,6 +19,7 @@ export function npcInventory(response, npcData, items) {
             if (index < itemNames.length - 1) info += ' and ';
             index++;
         });
+        info += '.';
     }
 
     response.push(info);
