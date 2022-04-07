@@ -6,9 +6,10 @@
   "weight": "welterweight",
   "percentMovement": 10,
   "percentPickup": 2,
-  "percentDrop": 2,
+  "percentDrop": 5,
   "percentTalk": 25,
   "weightCarried": 3,
+  "retainItem": "notepad",
   "items": [
     {"name": "notepad" }
   ],
