@@ -47,7 +47,8 @@ class App extends React.Component {
             playerDied: false,
             soundEnabled: false,
             currentNPCLocation: undefined,
-            npcData: undefined
+            npcData: undefined,
+            quitInProgress: false
         }
     };
 
@@ -160,7 +161,7 @@ class App extends React.Component {
               if (this.state.parser && this.state.parser === 'wordPuzzle') {
                   response = WordPuzzleParser(command, location, this.state.items, this.updateParser, this.state.guessesLeft, this.updateGuessesLeft, player);
               } else {
-                  response = GameEngine(command, location, this.state.items, this.moveLocation, player, this.damagePlayer, npcData, this.state.currentNPCLocation);
+                  response = GameEngine(command, location, this.state.items, this.moveLocation, player, this.damagePlayer, npcData, this.state.currentNPCLocation, this.quitInProgress, this.state.quitInProgress, this.endGame);
               }
               if (response && response.length > 0) {
                   for (const line of response) {
@@ -216,6 +217,10 @@ class App extends React.Component {
         this.setState({guessesLeft: this.state.guessesLeft - 1});
   }
 
+  quitInProgress = (value) => {
+        this.setState({quitInProgress: value});
+  }
+
   startGame = () => {
       let loadedLocations = [];
       Object.keys(locationData).forEach(function(key) {
@@ -255,6 +260,15 @@ class App extends React.Component {
       this.setState({score: 0});
       this.setState({gameRunning: true});
       this.setState({health: shared.maxHealth});
+      this.setState({quitInProgress: false});
+  }
+
+  endGame = () => {
+      this.setState({gameRunning: false});
+      for (let i = 0; i < shared.outputRows; i++) {     //blank rows in case we are restarting
+          this.pushOutputText("");
+      }
+      this.playFailureSound();
   }
 
   onSoundEnableChanged = (event) => {

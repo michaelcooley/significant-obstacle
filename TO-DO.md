@@ -56,7 +56,8 @@
 54. **DONE** create NPC part 2: NPC can move around randomly
 55. **DONE** implement basic fight command 
 56. **DONE** create NPC part 3: NPC can talk
-57. create NPC part 4: NPC can pick up and drop things
-58. create NPC part 5: NPC can converse with player
+57. **DONE** create NPC part 4: NPC can pick up and drop things
+58. **DONE** implement quit command with confirmation
+
 
 

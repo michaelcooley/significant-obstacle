@@ -3,7 +3,18 @@ import { takeExit } from "./takeExit";
 import { listInventory } from "./listInventory";
 import { shared } from "./shared";
 
-export function parseOneWordCommands(word, words, response, location, player, items, moveLocation, damagePlayer, currentNPCLocation, npcData) {
+export function parseOneWordCommands(word, words, response, location, player, items, moveLocation, damagePlayer, currentNPCLocation, npcData, quitInProgress, quitInProgressState, endGame) {
+
+    if (quitInProgressState) {
+        if (words[0] === 'y' || words[0] === 'yes') {
+            response.push(`Farewell, old friend...`);
+            endGame();
+        } else {
+            quitInProgress(false);
+            response.push(`Alrighty, then...`);
+        }
+        return response;
+    }
     switch (words[0]) {
         case 'look':
         case 'l':
@@ -35,6 +46,11 @@ export function parseOneWordCommands(word, words, response, location, player, it
             break;
         case 'fight':
             response.push(`You punch yourself in the face and then yell, 'are you threatening me?!'`);
+            break;
+        case 'q':
+        case 'quit':
+            response.push('Are you sure you want to give up so easily?');
+            quitInProgress(true);
             break;
         default:
             response.push(shared.unrecognizedCommand);
