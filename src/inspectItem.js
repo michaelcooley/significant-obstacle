@@ -15,8 +15,7 @@ export function inspectItem(player, location, items, itemName, npcData) {
 
     if (!found) {   //see if it's the NPC
         if (itemName.toLowerCase() === npcData.name.toLowerCase()) {
-            console.log('NPC is here');
-            response = examineNPC(npcData, items, response);
+            response = examineNPC(true, npcData, items, response);
             found = true;
         }
     }

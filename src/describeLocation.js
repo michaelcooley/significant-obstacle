@@ -1,7 +1,9 @@
 import { describeExits } from "./describeExits";
 import { describeItems } from "./describeItems";
+import {examineNPC} from "./examineNPC";
 
-export function describeLocation(currentLoc, items) {
+export function describeLocation(currentLoc, currentNPCLocation, npcData, items) {
+
     let response = [];
 
     response.push(currentLoc.longDescription);
@@ -11,6 +13,10 @@ export function describeLocation(currentLoc, items) {
     response.push(exits);
     response.push('');  //add blank line
     describeItems(items, currentLoc, response);
+
+    if (currentNPCLocation.name === currentLoc.name) { //if NPC is here, say so
+        response = examineNPC(false, npcData, items, response)
+    }
 
     return response;
 }

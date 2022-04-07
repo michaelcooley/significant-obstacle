@@ -21,7 +21,7 @@ import gulpSound from './sounds/gulp.wav';
 import victorySound from './sounds/victory.wav';
 import failureSound from './sounds/failure.wav';
 import {npcActions} from "./npcActions";
-import {npcDescriptionAndTalk} from "./npcDescriptionAndTalk";
+import {examineNPC} from "./examineNPC";
 
 
 class App extends React.Component {
@@ -90,18 +90,10 @@ class App extends React.Component {
                 if (loc.name === location) {
                     this.setState({currentLocation: loc});
                     let response = [];
-                    response = describeLocation(loc, this.state.items);
+                    response = describeLocation(loc, this.state.currentNPCLocation, this.state.npcData, this.state.items);
                     if (response && response.length > 0) {
                         for (const line of response) {
                             this.pushOutputText(line);
-                        }
-                    }
-                    if (this.state.currentNPCLocation.name === loc.name) { //if NPC is here, say so
-                        response = npcDescriptionAndTalk(npcData);
-                        if (response && response.length > 0) {
-                            for (const line of response) {
-                                this.pushOutputText(line);
-                            }
                         }
                     }
                 }
@@ -137,7 +129,7 @@ class App extends React.Component {
                     if (loc.name === newLocation) {
                         this.setState({currentLocation: loc});
                         let response = [];
-                        response = describeLocation(loc, this.state.items);
+                        response = describeLocation(loc, this.state.currentNPCLocation, this.state.npcData, this.state.items);
                         if (response && response.length > 0) {
                             for (const line of response) {
                                 this.pushOutputText(line);
@@ -168,7 +160,7 @@ class App extends React.Component {
               if (this.state.parser && this.state.parser === 'wordPuzzle') {
                   response = WordPuzzleParser(command, location, this.state.items, this.updateParser, this.state.guessesLeft, this.updateGuessesLeft, player);
               } else {
-                  response = GameEngine(command, location, this.state.items, this.moveLocation, player, this.damagePlayer, npcData);
+                  response = GameEngine(command, location, this.state.items, this.moveLocation, player, this.damagePlayer, npcData, this.state.currentNPCLocation);
               }
               if (response && response.length > 0) {
                   for (const line of response) {
@@ -242,7 +234,7 @@ class App extends React.Component {
           if (loc.name === this.state.initialLocationName) {
               this.setState({currentLocation: loc});
               let response = [];
-              response = describeLocation(loc, loadedItems);
+              response = describeLocation(loc, this.state.initialNPCLocationName, this.state.npcData, loadedItems);
               if (response && response.length > 0) {
                   for (const line of response) {
                       this.pushOutputText(line);
@@ -267,8 +259,6 @@ class App extends React.Component {
 
   onSoundEnableChanged = (event) => {
         let enabled = event.target.checked;
-        console.log('sound enable change: ' + enabled);
-
         this.setState({soundEnabled: enabled});
   }
 

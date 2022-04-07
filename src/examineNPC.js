@@ -1,9 +1,13 @@
 import {npcInventory} from "./npcInventory";
-import {npcDescriptionAndTalk} from "./npcDescriptionAndTalk";
+import {npcTalk} from "./npcTalk";
 
-export function examineNPC(npcData, items, response) {
-    response.push(`${npcData.name} is ${npcData.description} and ${npcData.extraDetail}`);
+export function examineNPC(verbose, npcData, items, response) {
+    if (verbose) {
+        response.push(`${npcData.name} is ${npcData.description} and ${npcData.extraDetail}`);
+    } else {
+        response.push(`${npcData.name} is here`);
+    }
     response = npcInventory(response, npcData, items);
-    response = npcDescriptionAndTalk(response, npcData);
+    response = npcTalk(response, npcData);
     return response;
 }
